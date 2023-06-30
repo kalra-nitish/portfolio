@@ -148,8 +148,7 @@ export const TOOLS_AND_TECH = [
         href: 'https://aws.amazon.com/',
         description:
           ' I&apos;ve extensively used AWS for building and deploying\n' +
-          '              applications with several AWS services. I&apos;m an\n' +
-          '              <b>AWS Certified Solutions Architect - Associate.</b>',
+          '              applications with several AWS services.',
       },
       {
         id: 2,
