@@ -139,22 +139,26 @@ export default function ArticleViewer() {
             font-size: 2.5rem;
             font-weight: 800;
             line-height: 1.2;
-            color: #18181b;
+            color: #000 !important;
             margin-bottom: 1rem;
           }
-          article h2 {
-            font-size: 1.875rem;
-            font-weight: 700;
-            color: #18181b;
-            margin-top: 3rem;
-            margin-bottom: 1rem;
+          article h2,
+          article .prose h2,
+          .prose article h2 {
+            font-size: 1.875rem !important;
+            font-weight: 700 !important;
+            color: #000 !important;
+            margin-top: 3rem !important;
+            margin-bottom: 1rem !important;
           }
-          article h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #27272a;
-            margin-top: 2rem;
-            margin-bottom: 0.75rem;
+          article h3,
+          article .prose h3,
+          .prose article h3 {
+            font-size: 1.5rem !important;
+            font-weight: 600 !important;
+            color: #000 !important;
+            margin-top: 2rem !important;
+            margin-bottom: 0.75rem !important;
           }
           article figure {
             margin: 2rem 0;
@@ -228,11 +232,15 @@ export default function ArticleViewer() {
             article header h1 {
               font-size: 2rem;
             }
-            article h2 {
-              font-size: 1.5rem;
+            article h2,
+            article .prose h2,
+            .prose article h2 {
+              font-size: 1.5rem !important;
             }
-            article h3 {
-              font-size: 1.25rem;
+            article h3,
+            article .prose h3,
+            .prose article h3 {
+              font-size: 1.25rem !important;
             }
           }
         `}</style>
