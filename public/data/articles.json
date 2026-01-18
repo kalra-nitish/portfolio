@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "agentic-ai-in-action-security-implications",
+    "title": "Agentic AI in Action: Real-World Security Implications, Use Cases, and Future Defenses",
+    "description": "Exploring the transformative potential and security challenges of Agentic AI systems in cybersecurity, including use cases, dual-use nature, emerging challenges, and strategic frameworks for secure implementation.",
+    "author": "Nitish Kalra",
+    "date": "2026-01-18"
+  },
+  {
+    "slug": "agentic-ai-cybersecurity-risk",
+    "title": "Agentic AI: The Next Frontier in Cybersecurity Risk",
+    "description": "In the race toward autonomous intelligence, will we build agents we can trust? Exploring how Agentic AI systems pursue goals autonomously, making decisions and executing tasks with little to no human supervision.",
+    "author": "Nitish Kalra",
+    "date": "2025-11-02"
+  },
+  {
+    "slug": "perceptrons-in-artificial-intelligence-and-machine-learning",
+    "title": "Perceptrons in Artificial Intelligence & Machine Learning",
+    "description": "In machine learning, a binary classifier is a type of algorithm or model that is designed to classify data into two distinct classes or categories. It is specifically used for binary classification tasks, where the goal is to assign each input instance to one of the two classes.",
+    "author": "Nitish Kalra",
+    "date": "2023-06-15"
+  },
+  {
+    "slug": "decision-trees-a-simple-way",
+    "title": "Decision Trees — A Simple Way",
+    "description": "A Decision Tree is made up of nodes and edges. Each node represents a decision or a test on a feature, and each edge represents the outcome of the test. The topmost node in the tree is the root node, and the bottom nodes are the leaf nodes.",
+    "author": "Nitish Kalra",
+    "date": "2023-04-14"
+  },
+  {
+    "slug": "getting-started-with-machine-learning",
+    "title": "Getting Started with Machine Learning",
+    "description": "In the rapidly evolving world of technology, machine learning has emerged as a game-changing force, transforming industries across the board. From healthcare and finance to transportation and marketing, organizations are leveraging the potential of machine learning algorithms to drive innovation, enhance decision-making processes, and achieve unprecedented levels of efficiency.",
+    "author": "Nitish Kalra",
+    "date": "2023-04-10"
+  },
+  {
+    "slug": "responsive-layouts-with-MUI5",
+    "title": "Responsive Layouts With MUI5",
+    "description": "A responsive layout is a design approach that aims to create websites or applications that adapt to the screen size and orientation of the device being used to view them.",
+    "author": "Nitish Kalra",
+    "date": "2023-04-04"
+  },
+  {
+    "slug": "brief-overview-of-2022-react-hooks",
+    "title": "Brief Overview of React Hooks in 2022",
+    "description": "React Hooks, the most widely used feature, a game changer in the field of coding",
+    "author": "Nitish Kalra",
+    "date": "2023-03-23"
+  }
+]
+

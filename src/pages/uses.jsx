@@ -40,7 +40,7 @@ export default function Uses() {
         title="Software I use, tools I love, and other things I recommend."
         intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I'm being productive when I'm really just procrastinating. Here's a big list of all of my favorite stuff."
       >
-        <div className="space-y-20">
+        <div className="space-y-20 pb-32">
           {TOOLS_AND_TECH.map((section) => (
             <ToolsSection key={`section${section?.id}`} title={section.title}>
               {section.technologies.map((tool) => (

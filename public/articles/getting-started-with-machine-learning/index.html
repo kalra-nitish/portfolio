@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Machine Learning - Nitish Kalra</title>
+    <meta name="description" content="In the rapidly evolving world of technology, machine learning has emerged as a game-changing force, transforming industries across the board. From healthcare and finance to transportation and marketing, organizations are leveraging the potential of machine learning algorithms to drive innovation, enhance decision-making processes, and achieve unprecedented levels of efficiency.">
+    <meta name="author" content="Nitish Kalra">
+</head>
+<body>
+    <article>
+        <header>
+            <h1>Getting Started with Machine Learning</h1>
+            <div class="article-meta">
+                <span class="author">By Nitish Kalra</span>
+                <span class="date">April 14, 2023</span>
+            </div>
+        </header>
+
+        <section id="introduction">
+            <p>In the rapidly evolving world of technology, machine learning has emerged as a game-changing force, transforming industries across the board. From healthcare and finance to transportation and marketing, organizations are leveraging the potential of machine learning algorithms to drive innovation, enhance decision-making processes, and achieve unprecedented levels of efficiency.</p>
+            <p class="lead"><em>"The best way to predict the future is to create it." — Peter Drucker</em></p>
+        </section>
+
+        <section id="ai-introduction">
+            <h2>AI aka Artificial Intelligence</h2>
+            <p>Is it a human or a machine? Are computer programs so smart and work efficiently like a human brain?</p>
+            <p>AI refers to the capability of a machine or a computer system to mimic or imitate human-like intelligence, including the ability to learn, reason, problem-solve, and make decisions.</p>
+            <p><strong>Machine Learning branches out from AI</strong></p>
+            <p>Machine learning is a subfield of artificial intelligence (AI) that involves the development of algorithms and statistical models that enable computers to learn from and make predictions or decisions based on data, without being explicitly programmed. It involves the use of data to train algorithms to recognize patterns, make predictions, or solve problems, without being explicitly programmed to do so.</p>
+        </section>
+
+        <section id="history">
+            <h2>History of Machine Learning</h2>
+            <p>It dates back to the mid-20th century, with the development of early concepts and algorithms that laid the foundation for modern machine learning.</p>
+            
+            <h3>1950s-1960s:</h3>
+            <ol>
+                <li>Early work on artificial neural networks, perceptrons, and the development of "Rosenblatt's perceptron" algorithm, which was one of the first supervised learning algorithms.</li>
+                <li>The concept of reinforcement learning was introduced, which focuses on training agents to take action in an environment to maximize rewards.</li>
+            </ol>
+
+            <h3>1970s-1980s:</h3>
+            <ol>
+                <li>The development of decision tree algorithms, such as ID3 and C4.5, which are used for classification tasks.</li>
+                <li>The introduction of the k-Nearest Neighbors algorithm, a simple instance-based learning approach.</li>
+                <li>The concept of unsupervised learning was introduced, which focuses on learning patterns or structures in data without labeled examples.</li>
+            </ol>
+
+            <h3>1990s-2000s:</h3>
+            <ol>
+                <li>The development of support vector machines (SVMs), a popular algorithm for binary classification tasks.</li>
+                <li>The rise of ensemble methods, such as bagging and boosting, which combine multiple models to improve performance.</li>
+                <li>The introduction of kernel methods, such as the kernel trick used in SVMs, allows non-linear transformations of data.</li>
+                <li>The development of probabilistic graphical models, such as Bayesian networks and Markov models, which model the relationships among variables in data.</li>
+            </ol>
+
+            <h3>2010s-2020s:</h3>
+            <ol>
+                <li>The breakthroughs in deep learning, particularly convolutional neural networks (CNNs) for image recognition and recurrent neural networks (RNNs) for sequential data processing.</li>
+                <li>The advancements in natural language processing (NLP), include word embeddings, recurrent neural networks (RNNs), and transformer models such as BERT and GPT-3.</li>
+                <li>The rise of big data and the development of scalable machine learning frameworks, such as Apache Spark and TensorFlow.</li>
+                <li>The increased focus on ethical considerations in machine learning, including fairness, transparency, and accountability.</li>
+            </ol>
+        </section>
+
+        <section id="types-of-ml">
+            <h2>Types of Machine Learning</h2>
+            
+            <h3>Unsupervised Learning:</h3>
+            <p>This mainly focuses on <strong>what happened</strong>.</p>
+            <ul>
+                <li>Unlabeled Data</li>
+                <li>Finding Patterns</li>
+                <li>Anomaly Detection</li>
+                <li>Feature Extraction</li>
+                <li>No Ground Truth</li>
+                <li>Dimensionality Reduction</li>
+            </ul>
+            <p>Relative Links: <a href="https://www.javatpoint.com/unsupervised-machine-learning" target="_blank" rel="noopener noreferrer">Learn more about Unsupervised Learning</a></p>
+
+            <h3>Supervised Learning:</h3>
+            <p>This mainly focuses on <strong>what's going to happen</strong>.</p>
+            <ul>
+                <li>Labeled Data</li>
+                <li>Predictive Analysis</li>
+                <li>Classification & Regression</li>
+                <li>Direct Feedback</li>
+                <li>Model Evaluation</li>
+                <li>Model Selection & Tuning</li>
+            </ul>
+            <p>Relative Links: <a href="https://www.javatpoint.com/supervised-machine-learning" target="_blank" rel="noopener noreferrer">Learn more about Supervised Learning</a></p>
+
+            <h3>Reinforcement Learning:</h3>
+            <p>This mainly focuses on <strong>how to make it happen</strong>.</p>
+            <ul>
+                <li>Exploration and Exploitation</li>
+                <li>Learning from Feedback</li>
+                <li>Reward Function</li>
+                <li>Trial-and-Error Learning</li>
+                <li>Sequential Decision Making</li>
+                <li>Markov Decision Process</li>
+            </ul>
+            <p>Relative Learning: <a href="https://www.geeksforgeeks.org/what-is-reinforcement-learning/" target="_blank" rel="noopener noreferrer">Learn more about Reinforcement Learning</a></p>
+        </section>
+
+        <section id="ml-and-society">
+            <h2>Machine Learning and Man in the Street</h2>
+            <ol>
+                <li><strong>Personalized experiences:</strong> Most of us today enjoy personalized experiences through recommendation systems used in online shopping, streaming services, social media, and more. These recommendations are powered by ML algorithms that analyze our data to provide tailored content, products, and services.</li>
+                <li><strong>Accessibility to information:</strong> It has made information more accessible to us through search engines, virtual assistants, and language translation tools.</li>
+                <li><strong>Improved healthcare:</strong> It is being used in medical diagnostics, telemedicine, and remote monitoring, making healthcare services more accessible and convenient for common people.</li>
+                <li><strong>Automation of tasks:</strong> It can automate repetitive tasks, such as customer service, data entry, and document processing, freeing up time for us to focus on more meaningful activities or leisure pursuits.</li>
+                <li><strong>Enhanced safety:</strong> It is used in technologies like driver-assistance systems in cars and smart home devices, which can enhance safety by reducing human errors and accidents, making everyday life safer and more convenient.</li>
+                <li><strong>Personal finance management:</strong> Algorithms can analyze financial data and provide personalized financial advice, helping us make informed decisions about budgeting, investing, and financial planning, potentially improving our financial well-being.</li>
+                <li><strong>Environmental impact:</strong> It can be used in areas such as climate modeling, energy optimization, and waste management, which can have a positive impact on the environment and contribute to a better quality of life for all.</li>
+            </ol>
+        </section>
+
+        <section id="ml-requirements">
+            <h2>Machine Learning Requirements</h2>
+            <p><strong>Python</strong> (<a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">https://www.python.org/</a>), latest release 3.11.2, is a popular programming language due to its extensive libraries, ease of use, and wide community support.</p>
+            
+            <h3>Libraries:</h3>
+            <p>Python has a rich ecosystem of ML libraries, such as <strong>TensorFlow</strong>, <strong>Keras</strong>, <strong>PyTorch</strong>, <strong>Scikit-Learn</strong>, and <strong>NumPy</strong>, which provide powerful tools for building ML models, handling data, and evaluating model performance.</p>
+            
+            <h3>Useful Editors:</h3>
+            <ol>
+                <li>Jupyter Notebook</li>
+                <li>PyCharm</li>
+                <li>Google Colaboratory</li>
+                <li>Atom</li>
+                <li>PyDev</li>
+            </ol>
+        </section>
+
+        <section id="getting-started-jupyter">
+            <h2>Getting Started with Jupyter Notebook</h2>
+            <p>The easiest way for a beginner to get started with Jupyter Notebooks is by installing <strong>Anaconda</strong>.</p>
+            <p>Anaconda is the most widely used Python distribution for data science and comes pre-loaded with all the most popular libraries and tools.</p>
+            
+            <h3>To get Anaconda, simply:</h3>
+            <ol>
+                <li>Download the latest version of Anaconda for Python latest version.</li>
+                <li>Install Anaconda by following the instructions on the download page and/or in the executable.</li>
+                <li>Open Jupyter via the shortcut Anaconda.
+                    <figure>
+                        <img src="./anaconda.webp" alt="Anaconda Navigator Interface" loading="lazy">
+                        <figcaption>Anaconda Navigator - Your gateway to Jupyter</figcaption>
+                    </figure>
+                </li>
+                <li>Browse to the folder in which you would like to create your first notebook, click the "New" drop-down button in the top-right and select "Python 3":
+                    <figure>
+                        <img src="./anacondasetup.png" alt="Creating a new Python 3 notebook" loading="lazy">
+                        <figcaption>Creating a new Python 3 Jupyter notebook</figcaption>
+                    </figure>
+                </li>
+            </ol>
+
+            <h3>The Notebook Interface</h3>
+            <figure>
+                <img src="./notebook.png" alt="Jupyter Notebook Interface" loading="lazy">
+                <figcaption>Jupyter Notebook interface with cells and kernels</figcaption>
+            </figure>
+            <p>There are two fairly prominent terms: <strong>cells</strong> and <strong>kernels</strong> are key both to understanding Jupyter.</p>
+            <ol>
+                <li>A <strong>kernel</strong> is a "computational engine" that executes the code contained in a notebook document.</li>
+                <li>A <strong>cell</strong> is a container for text to be displayed in the notebook or code to be executed by the notebook's kernel.</li>
+            </ol>
+            <p>Type <code>print('Hello World!')</code> into the cell and click the run button.</p>
+            <figure>
+                <img src="./helloworld.png" alt="Hello World output in Jupyter" loading="lazy">
+                <figcaption>Your first Python code in Jupyter!</figcaption>
+            </figure>
+            <p><strong>Hurray!!</strong> You have your first code of Python ready.</p>
+            <p>For more information and to get familiar with Jupyter: <a href="https://jupyter-notebook.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">Jupyter Documentation</a></p>
+        </section>
+
+        <section id="books">
+            <h2>Books to Refer:</h2>
+            <ol>
+                <li><strong>"Pattern Recognition and Machine Learning" by Christopher Bishop:</strong> This covers the fundamentals of machine learning, including various models such as linear regression, logistic regression, decision trees, support vector machines, neural networks, and more. It also provides in-depth explanations of key concepts and practical implementation techniques. — <em>My Personal Favorite</em>.</li>
+                <li>"Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" by Aurélien Géron</li>
+                <li>"Deep Learning" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville</li>
+                <li>"Python Machine Learning" by Sebastian Raschka and Vahid Mirjalili</li>
+                <li>"Applied Machine Learning" by Kelleher, Mac Namee, and D'Arcy</li>
+            </ol>
+        </section>
+
+        <footer class="article-footer">
+            <hr>
+            <p>Hope this would help in your ML journey.</p>
+            <p>I will continue writing more on "Evaluating the Model, Data Mining, etc." in upcoming blogs.</p>
+            <p><strong>Stay Tuned.</strong></p>
+        </footer>
+    </article>
+</body>
+</html>
+

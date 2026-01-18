@@ -4,6 +4,50 @@ module.exports = {
   darkMode: 'class',
   plugins: [require('@tailwindcss/typography')],
   theme: {
+    extend: {
+      colors: {
+        robb: {
+          purple: '#7c3aed',
+          purpleDark: '#6d28d9',
+          cyan: '#67e8f9',
+          cyanLight: '#a5f3fc',
+          navy: '#1e3a8a',
+          navyDark: '#1e293b',
+          pink: '#f472b6',
+          gray: '#f8fafc',
+          grayDark: '#cbd5e1',
+        },
+      },
+      fontFamily: {
+        'serif': ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+        'sans': ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+      },
+      animation: {
+        'gradient': 'gradient 8s linear infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+      },
+      keyframes: {
+        gradient: {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        glow: {
+          '0%': { opacity: '0.5' },
+          '100%': { opacity: '1' },
+        }
+      },
+    },
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],

@@ -1,6 +1,54 @@
 export const TOOLS_AND_TECH = [
   {
     id: 1,
+    title: 'AI / Machine Learning / Data Science',
+    technologies: [
+      {
+        id: 1,
+        title: 'Python',
+        href: 'https://www.python.org/',
+        description:
+          'Python has become my go-to language for AI/ML development. With an extensive ecosystem of libraries and frameworks, I&apos;ve been leveraging Python for data science, machine learning, and AI projects for <b>over 2 years</b> now, especially after pursuing my M.Tech in Data Science & Engineering from BITS Pilani.',
+      },
+      {
+        id: 2,
+        title: 'TensorFlow & PyTorch',
+        href: 'https://www.tensorflow.org/',
+        description:
+          'Deep learning frameworks that power modern AI applications. I&apos;ve used both TensorFlow and PyTorch extensively for building neural networks, computer vision models, and NLP applications. My experience includes implementing CNNs, RNNs, and transformer architectures.',
+      },
+      {
+        id: 3,
+        title: 'LangChain & Agentic AI',
+        href: 'https://www.langchain.com/',
+        description:
+          'As evidenced by my recent articles on Agentic AI and cybersecurity, I&apos;ve been deeply involved in building autonomous AI agents using LangChain. This includes developing agents for threat hunting, automated security tasks, and intelligent incident investigation.',
+      },
+      {
+        id: 4,
+        title: 'OpenAI APIs & LLMs',
+        href: 'https://openai.com/',
+        description:
+          'Working extensively with large language models including GPT-4, Claude, and other LLMs. I&apos;ve integrated these models into production applications, built custom chatbots, and developed AI-powered features for enterprise applications.',
+      },
+      {
+        id: 5,
+        title: 'Scikit-Learn & Data Analysis',
+        href: 'https://scikit-learn.org/',
+        description:
+          'Classical machine learning algorithms remain fundamental. I use scikit-learn for everything from decision trees and random forests to SVMs and clustering algorithms. Combined with pandas and numpy for data manipulation and analysis.',
+      },
+      {
+        id: 6,
+        title: 'Vector Databases & RAG',
+        href: 'https://www.pinecone.io/',
+        description:
+          'Building Retrieval-Augmented Generation (RAG) systems using vector databases like Pinecone, Weaviate, and Chroma. Essential for creating context-aware AI applications and improving LLM responses with domain-specific knowledge.',
+      },
+    ],
+  },
+  {
+    id: 2,
     title: 'Frontend Technologies / Skills',
     technologies: [
       {
@@ -45,7 +93,7 @@ export const TOOLS_AND_TECH = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Backend Technologies / Skills',
     technologies: [
       {
@@ -90,7 +138,7 @@ export const TOOLS_AND_TECH = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Fullstack Framework? (Maybe)',
     technologies: [
       {
@@ -108,7 +156,7 @@ export const TOOLS_AND_TECH = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: 'Database Technologies / Skills',
     technologies: [
       {
@@ -139,7 +187,7 @@ export const TOOLS_AND_TECH = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: 'DevOps / Cloud Technologies',
     technologies: [
       {
@@ -180,7 +228,7 @@ export const TOOLS_AND_TECH = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: 'Headless CMS',
     technologies: [
       {
@@ -213,7 +261,7 @@ export const TOOLS_AND_TECH = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: 'Design',
     technologies: [
       {
@@ -228,7 +276,7 @@ export const TOOLS_AND_TECH = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: 'Source Control',
     technologies: [
       {
@@ -237,8 +285,7 @@ export const TOOLS_AND_TECH = [
         href: 'https://github.com/',
         description:
           'GitHub is my stop solution for all professional and personal\n' +
-          '              projects. With the grand entry of GitHub Copilot, I&apos;m looking\n' +
-          '              forward to see how it&apos;s going to change the way I code.',
+          '              projects. With GitHub Copilot and AI-powered coding assistants, the way we write code has fundamentally changed. I&apos;m actively exploring how AI can enhance developer productivity.',
       },
       {
         id: 2,
@@ -251,7 +298,7 @@ export const TOOLS_AND_TECH = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     title: 'Tools',
     technologies: [
       {
@@ -264,6 +311,20 @@ export const TOOLS_AND_TECH = [
       },
       {
         id: 2,
+        title: 'Cursor AI',
+        href: 'https://cursor.sh/',
+        description:
+          'The future of coding with AI. Cursor has revolutionized how I write code by integrating powerful AI assistance directly into the IDE. It&apos;s particularly useful for rapid prototyping and exploring new technologies.',
+      },
+      {
+        id: 3,
+        title: 'Jupyter Notebooks',
+        href: 'https://jupyter.org/',
+        description:
+          'Essential for data science and ML experimentation. I use Jupyter extensively for exploratory data analysis, model prototyping, and creating interactive visualizations for data-driven insights.',
+      },
+      {
+        id: 4,
         title: 'iTerm2',
         href: 'https://iterm2.com/',
         description:
@@ -272,7 +333,7 @@ export const TOOLS_AND_TECH = [
           '              use. Though I would like to give a try to Warp.',
       },
       {
-        id: 3,
+        id: 5,
         title: 'Notion',
         href: 'https://www.notion.so/',
         description:
