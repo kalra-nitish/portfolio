@@ -59,7 +59,7 @@ export default function About() {
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             I’m <strong className="font-semibold text-robb-purple">Nitish Kalra</strong> from New Delhi, India, where I make <strong className="font-semibold text-robb-purple">Browsers</strong> Dance.
             </h1>
-            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+            <div className="mt-6 space-y-7 text-base">
               <p>
               From sketching and reading to building intelligent digital products, curiosity has always shaped how I grow. My first interaction with a computer in fourth grade quietly set the foundation for everything that followed. While my handwriting slowly faded, my passion for creating through technology only strengthened. Looking back, it feels less like coincidence and more like early alignment.</p>
               <p>My interests have always balanced creativity and structure. Anime, strategy games, and competitive play sharpen my problem-solving instincts, while reading history, mythology, and fiction continues to influence how I think about systems, narratives, and human behavior.</p>
