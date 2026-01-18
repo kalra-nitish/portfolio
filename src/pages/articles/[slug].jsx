@@ -211,9 +211,10 @@ export default function ArticleViewer() {
           article a:hover {
             color: #0e7490;
           }
+          article p strong,
           article strong {
-            font-weight: 600;
-            color: #18181b;
+            font-weight: 600 !important;
+            color: #000 !important;
           }
           article em {
             font-style: italic;
