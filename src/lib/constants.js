@@ -40,7 +40,7 @@ export const TOOLS_AND_TECH = [
       },
       {
         id: 6,
-        title: 'Vector Databases & RAG',
+        title: 'Vector Databases',
         href: 'https://www.pinecone.io/',
         description:
           'Building Retrieval-Augmented Generation (RAG) systems using vector databases like Pinecone, Weaviate, and Chroma. Essential for creating context-aware AI applications and improving LLM responses with domain-specific knowledge.',
