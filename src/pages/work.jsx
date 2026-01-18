@@ -278,7 +278,7 @@ export default function Work() {
               company="Kurukshetra University"
               role="B.Tech - Computer Science & Engineering"
               period="2010 - 2014"
-              logo="/images/logos/kuk.jpeg"
+              logo="/images/logos/Kuk.jpeg"
               logoAlt="Kurukshetra University"
               description={[
                 "Graduated with strong foundation in computer science fundamentals.",
