@@ -54,7 +54,7 @@ export function Layout({ children, bgColor = 'white', showConnectFooter = true }
       </div> */}
 
       {/* Header */}
-      <header className="fixed left-0 right-0 top-0 z-50">
+      <header className="lg:fixed lg:left-0 lg:right-0 lg:top-0 z-50 fixed top-0 left-0 right-0" style={{ backgroundColor: bgColor }}>
         <div className="flex items-center justify-between py-6 px-4 sm:px-8 lg:px-12">
           <div className="flex items-center gap-6">
             <Link href="/" aria-label="Home">
