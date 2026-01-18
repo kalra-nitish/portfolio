@@ -4,12 +4,8 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  TwitterIcon,
-} from '@/components/SocialIcons'
+import { Layout } from '@/components/Layout'
+
 import portraitImage from '@/images/portrait.jpg'
 
 function SocialLink({ className, href, children, icon: Icon }) {
@@ -39,12 +35,12 @@ function MailIcon(props) {
 
 export default function About() {
   return (
-    <>
+    <Layout bgColor="#8fd8c7">
       <Head>
         <title>About - Nitish Kalra</title>
         <meta
           name="description"
-          content="I’m Nitish Kalra. I live in New Delhi, India, from where I make browsers dance."
+          content="I'm Nitish Kalra. I live in New Delhi, India, from where I make browsers dance."
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -59,29 +55,25 @@ export default function About() {
               />
             </div>
           </div>
-          <div className="lg:order-first lg:row-span-2">
+          <div className="lg:order-first lg:row-span-2 pb-32">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I’m Nitish Kalra from New Delhi, India, where I make Browsers Dance.
+            I’m <strong className="font-semibold text-robb-purple">Nitish Kalra</strong> from New Delhi, India, where I make <strong className="font-semibold text-robb-purple">Browsers</strong> Dance.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                For me after sketching, computers and books have always share equivalent love, attention and importance.
-                I still remember the day when I saw a computer for the first time it was in my computers class 4th Grade, and from that day onwards, I've always been judged by my handwriting as typing lead me away from writing.
-                I guess it was already planned.
+              From sketching and reading to building intelligent digital products, curiosity has always shaped how I grow. My first interaction with a computer in fourth grade quietly set the foundation for everything that followed. While my handwriting slowly faded, my passion for creating through technology only strengthened. Looking back, it feels less like coincidence and more like early alignment.</p>
+              <p>My interests have always balanced creativity and structure. Anime, strategy games, and competitive play sharpen my problem-solving instincts, while reading history, mythology, and fiction continues to influence how I think about systems, narratives, and human behavior.</p>
+
+              Today, I work as a Software Engineer at Tech9, where I’ve evolved into a frontend-focused product and architecture leader. I design and scale modern UI platforms using <strong className="font-semibold text-robb-purple">React, Next.js, TypeScript, Tailwind, and MUI</strong>, while collaborating closely with backend systems in Go and cloud infrastructure on AWS. Beyond writing code, I take ownership of frontend architecture, mentor engineers, and help shape technical direction across products.
+
+<p>What excites me most now is the intersection of frontend engineering and AI. I actively explore how AI can enhance developer productivity, improve testing, support design systems, and enable more adaptive user experiences. I believe the future of frontend is not just visual — it is intelligent.</p>
+
+<p>My focus today is on building scalable systems, growing strong engineering teams, and creating products that feel fast, accessible, thoughtful, and future-ready.
               </p>
-              <p>
-                I've always been a fan of Anime, (DBZ, Naruto, One Punch, Boruto, One Piece). Big fan of PS games, I love to battle around on Arcade games, Race & Strategy.
-              </p>
-              <p>
-               The time which I spend very personally with a motive is something I spend on Reading.
-               I love to read, watch and explore History, Mythology & Fiction.
-              </p>
-              <p>
-                Today, I’m a Software Developer at Tech9, the company which has given me great opportunities from time to time, to upscale my career, I've worked here on many UI dev technologies like JS, React, Next, Tailwind, MUI, GO and AWS.
-              </p>
+              
             </div>
           </div>
-          <div className="lg:pl-20">
+          {/* <div className="lg:pl-20">
             <ul role="list">
               <SocialLink href="https://twitter.com/4561Nitish" icon={TwitterIcon}>
                 Follow on Twitter
@@ -89,7 +81,7 @@ export default function About() {
               <SocialLink href="https://instagram.com/nitish._kalra._" icon={InstagramIcon} className="mt-4">
                 Follow on Instagram
               </SocialLink>
-              <SocialLink href="https://github.com/kalra-nitish" icon={GitHubIcon} className="mt-4">
+              <SocialLink href="https://github.com/nitish-kalra-9" icon={GitHubIcon} className="mt-4">
                 Follow on GitHub
               </SocialLink>
               <SocialLink href="https://linkedin.com/in/nitishkalra-uiaspects/" icon={LinkedInIcon} className="mt-4">
@@ -103,9 +95,9 @@ export default function About() {
                 nitish4561kalra@gmail.com
               </SocialLink>
             </ul>
-          </div>
+          </div> */}
         </div>
       </Container>
-    </>
+    </Layout>
   )
 }

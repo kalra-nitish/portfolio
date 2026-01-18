@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 import { Container } from '@/components/Container'
+import { Layout } from '@/components/Layout'
 import { Prose } from '@/components/Prose'
 import { formatDate } from '@/lib/formatDate'
 
@@ -18,6 +19,16 @@ function ArrowLeftIcon(props) {
   )
 }
 
+// Array of background colors for articles
+const articleBackgroundColors = [
+  '#f0f9ff', // Light blue
+  '#f0fdf4', // Light green
+  '#fefce8', // Light yellow
+  '#fef2f2', // Light red
+  '#f3e8ff', // Light purple
+  '#ecfdf5', // Light emerald
+]
+
 export function ArticleLayout({
   children,
   meta,
@@ -30,10 +41,23 @@ export function ArticleLayout({
     return children
   }
 
+  // Generate a consistent background color based on the article slug
+  const getArticleBackgroundColor = () => {
+    if (!meta.title) return articleBackgroundColors[0]
+    
+    // Create a simple hash from the title to ensure consistent colors
+    let hash = 0
+    for (let i = 0; i < meta.title.length; i++) {
+      hash = ((hash << 5) - hash + meta.title.charCodeAt(i)) & 0xffffffff
+    }
+    
+    return articleBackgroundColors[Math.abs(hash) % articleBackgroundColors.length]
+  }
+
   return (
-    <>
+    <Layout bgColor={getArticleBackgroundColor()}>
       <Head>
-        <title>{`${meta.title} - Spencer Sharp`}</title>
+        <title>{`${meta.title} - Nitish Kalra`}</title>
         <meta name="description" content={meta.description} />
       </Head>
       <Container className="mt-16 lg:mt-32">
@@ -67,6 +91,6 @@ export function ArticleLayout({
           </div>
         </div>
       </Container>
-    </>
+    </Layout>
   )
 }

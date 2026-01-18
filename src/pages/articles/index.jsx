@@ -1,9 +1,10 @@
 import Head from 'next/head'
+import fs from 'fs'
+import path from 'path'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { formatDate } from '@/lib/formatDate'
-import { getAllArticles } from '@/lib/getAllArticles'
 
 function Article({ article }) {
   return (
@@ -48,8 +49,8 @@ export default function ArticlesIndex({ articles }) {
         title="Writing on software development, important aspects of UI development, Data Science."
         intro="The knowledge I get is the knowledge to be in public arranged in chronogical order."
       >
-        <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
-          <div className="flex max-w-3xl flex-col space-y-16">
+        <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40 pb-32">
+          <div className="flex max-w-4xl flex-col space-y-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
@@ -61,9 +62,17 @@ export default function ArticlesIndex({ articles }) {
 }
 
 export async function getStaticProps() {
+  // Read articles from JSON file
+  const articlesPath = path.join(process.cwd(), 'src/data/articles.json')
+  const articlesData = fs.readFileSync(articlesPath, 'utf8')
+  const articles = JSON.parse(articlesData)
+  
+  // Sort by date (newest first)
+  const sortedArticles = articles.sort((a, b) => new Date(b.date) - new Date(a.date))
+
   return {
     props: {
-      articles: (await getAllArticles()).map(({ component, ...meta }) => meta),
+      articles: sortedArticles,
     },
   }
 }

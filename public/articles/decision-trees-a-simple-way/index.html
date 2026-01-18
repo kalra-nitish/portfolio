@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Trees — A Simple Way - Nitish Kalra</title>
+    <meta name="description" content="A Decision Tree is made up of nodes and edges. Each node represents a decision or a test on a feature, and each edge represents the outcome of the test. The topmost node in the tree is the root node, and the bottom nodes are the leaf nodes.">
+    <meta name="author" content="Nitish Kalra">
+</head>
+<body>
+    <article>
+        <header>
+            <h1>Decision Trees — A Simple Way</h1>
+            <div class="article-meta">
+                <span class="author">By Nitish Kalra</span>
+                <span class="date">April 10, 2023</span>
+            </div>
+        </header>
+
+        <section id="introduction">
+            <p>A Decision Tree is made up of <strong>nodes</strong> and <strong>edges</strong>. Each node represents a decision or a test on a feature, and each edge represents the outcome of the test. The topmost node in the tree is the <strong>root node</strong>, and the bottom nodes are the <strong>leaf nodes</strong>.</p>
+            <p>Here's an example of a Decision Tree for a binary classification task, where we want to predict whether a person is likely to buy a product based on their age and income:</p>
+            <figure>
+                <img src="./decisionTree.png" alt="Decision Tree Example for Product Purchase Prediction" loading="lazy">
+                <figcaption>Example of a Decision Tree for binary classification</figcaption>
+            </figure>
+            <p>In this example, the root node represents the first decision, which is whether the person's age is less than or equal to 30. If the answer is yes, we move down the left branch to the next decision, which is whether the person's income is less than or equal to 50K. If the answer is no, we move down the right branch to the next decision, which is whether the person's income is greater than 50K.</p>
+            <p>At each node, we make a binary decision based on the value of a feature. This continues until we reach a leaf node, which represents the final decision. In this case, the leaf nodes represent whether the person is likely to purchase the product or not.</p>
+        </section>
+
+        <section id="why-decision-trees">
+            <h2>Why do we need Decision Trees?</h2>
+            <p>There are several reasons to use Decision Trees in machine learning:</p>
+            
+            <h3>1. Easy to interpret and visualize</h3>
+            <p>Decision Trees are easy to interpret and visualize, making them a popular choice for data analysis and decision-making tasks. The tree structure is intuitive and allows for an easy understanding of the decision-making process.</p>
+
+            <h3>2. Can handle both categorical and numerical data</h3>
+            <p>Decision Trees can handle both categorical and numerical data, making them versatile for a wide range of applications.</p>
+
+            <h3>3. Non-parametric</h3>
+            <p>Decision Trees are non-parametric, meaning they do not make assumptions about the underlying distribution of the data. This makes them useful when the data is not normally distributed or when there are outliers.</p>
+
+            <h3>4. Can handle missing values</h3>
+            <p>Decision Trees can handle missing values in the data, making them useful when dealing with incomplete datasets.</p>
+
+            <h3>5. Efficient</h3>
+            <p>Decision Trees are relatively efficient and can handle large datasets quickly. They are also scalable and can be used for both small and large datasets.</p>
+
+            <h3>6. Can be used for both classification and regression</h3>
+            <p>Decision Trees can be used for both classification and regression tasks, making them a versatile algorithm for a wide range of machine-learning problems.</p>
+
+            <h3>7. Can handle interactions between features</h3>
+            <p>Decision Trees can capture interactions between features, making them useful when there are complex relationships between the input variables.</p>
+        </section>
+
+        <section id="sample-data">
+            <h2>Sample Data to Create a Decision Tree</h2>
+            <p>Consider the following sample dataset that represents whether or not to play tennis based on different features:</p>
+            <figure>
+                <img src="./table.png" alt="Sample dataset for tennis playing prediction" loading="lazy">
+                <figcaption>Sample dataset: Features for predicting whether to play tennis</figcaption>
+            </figure>
+
+            <h3>Step 1: Calculate the entropy of the target variable (Play Tennis)</h3>
+            <p>Entropy in physics is simply a metric for measuring the degree of disorder or randomness of a system.</p>
+            <ol>
+                <li>The number of positive examples (Play Tennis = Yes) is 9, and the number of negative examples (Play Tennis = No) is 5.</li>
+                <li>The total number of examples is 14.</li>
+                <li>The entropy of the target variable is:
+                    <pre><code>Entropy(Play Tennis) = - (9/14) * log2(9/14) - (5/14) * log2(5/14) = 0.940</code></pre>
+                </li>
+            </ol>
+
+            <h3>Step 2: Calculate the Information Gain for each feature</h3>
+            <p>Information gain is a metric that helps us determine which attribute in a given set of training feature vectors is most useful for discriminating between target classes. We use it to decide the ordering of attributes in the nodes of the Decision Tree.</p>
+            <p>We calculate the Information Gain for each feature by subtracting the weighted average of the entropies of the target variable for each value of the feature from the entropy of the target variable.</p>
+            <figure>
+                <img src="./igTable.png" alt="Information Gain calculations for different features" loading="lazy">
+                <figcaption>Information Gain (IG) for each feature</figcaption>
+            </figure>
+            <p>Based on these calculations, we can see that the <strong>Outlook</strong> feature has the highest IG, followed by Wind, Temperature, and Humidity. Therefore, Outlook would be the best feature to split the dataset on first when creating a decision tree.</p>
+        </section>
+
+        <section id="decision-tree-result">
+            <h2>Decision Tree</h2>
+            <p>Based on the Information Gain calculations, we can create a decision tree as follows:</p>
+            <figure>
+                <img src="./outlook.png" alt="Final Decision Tree based on Outlook feature" loading="lazy">
+                <figcaption>Decision Tree constructed using Information Gain</figcaption>
+            </figure>
+            <p>Here, the first split is on the <strong>Outlook</strong> feature, since it has the highest IG. If the Outlook is Sunny, we check the Humidity feature next, and if the Humidity is High, we predict No, otherwise Yes. If the Outlook is Overcast, we predict Yes. If the Outlook is Rainy, we check the Wind feature next, and if the Wind is Weak, we predict Yes, otherwise No.</p>
+            <p>This is a general example and could not be the best decision tree, a best decision tree may vary with a real given dataset.</p>
+        </section>
+
+        <footer class="article-footer">
+            <hr>
+            <p>Overall, Decision Trees are a powerful and versatile machine learning algorithm that can be used for a wide range of tasks. They are particularly useful when the data is non-parametric, contains missing values, or has complex relationships between the input variables.</p>
+        </footer>
+    </article>
+</body>
+</html>
+

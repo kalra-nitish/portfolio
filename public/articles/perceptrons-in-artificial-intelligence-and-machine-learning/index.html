@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perceptrons in Artificial Intelligence & Machine Learning - Nitish Kalra</title>
+    <meta name="description" content="In machine learning, a binary classifier is a type of algorithm or model that is designed to classify data into two distinct classes or categories. It is specifically used for binary classification tasks, where the goal is to assign each input instance to one of the two classes.">
+    <meta name="author" content="Nitish Kalra">
+</head>
+<body>
+    <article>
+        <header>
+            <h1>Perceptrons in Artificial Intelligence & Machine Learning</h1>
+            <div class="article-meta">
+                <span class="author">By Nitish Kalra</span>
+                <span class="date">June 15, 2023</span>
+            </div>
+        </header>
+
+        <p class="lead"><em>"The best way to predict the future is to create it." — Peter Drucker</em></p>
+
+        <section id="binary-classifiers">
+            <h2>Binary Classifiers</h2>
+            <p>In machine learning, a binary classifier is a type of algorithm or model that is designed to classify data into two distinct classes or categories. It is specifically used for binary classification tasks, where the goal is to assign each input instance to one of the two classes.</p>
+            <p>The two classes are often referred to as the positive class and the negative class, or class 1 and class 0, depending on the context. The classifier takes input features and outputs a prediction indicating which class the input belongs to.</p>
+            <p>It could be based on various algorithms and techniques, including but not limited to:</p>
+            <ol>
+                <li><strong>Logistic Regression</strong>: It models the probability of an instance belonging to a certain class using a logistic function, which is then thresholded to make the final binary prediction.</li>
+                <li><strong>Support Vector Machines (SVM)</strong>: SVM constructs a hyperplane or set of hyperplanes in a high-dimensional space to separate the two classes with maximum margin.</li>
+                <li><strong>Decision Trees</strong>: Decision trees recursively split the input space based on different feature values until reaching leaf nodes that represent the class labels.</li>
+                <li><strong>Random Forests</strong>: Random forests combine multiple decision trees, where each tree contributes to the final prediction, and the class with the majority vote is selected.</li>
+                <li><strong>Gradient Boosting algorithms</strong>: Gradient Boosting methods like XGBoost or AdaBoost create an ensemble of weak learners (often decision trees) that are sequentially trained to correct the mistakes made by the previous learners.</li>
+                <li><strong>Neural Networks</strong>: Neural networks, including perceptrons and more complex architectures like multi-layer perceptrons (MLPs), can be used as binary classifiers by setting up the appropriate output layer with a suitable activation function.</li>
+            </ol>
+            <p>Its performance is commonly evaluated using metrics such as <strong>accuracy</strong>, <strong>precision</strong>, <strong>recall</strong>, <strong>F1 score</strong>, and <strong>area under the receiver operating characteristic curve (ROC AUC)</strong>. These metrics help measure the classifier's ability to correctly classify instances from both classes and balance between minimizing false positives and false negatives.</p>
+            <p>Applications in various domains, such as spam detection, fraud detection, disease diagnosis, sentiment analysis, and many other areas where the problem involves making a decision between two mutually exclusive options.</p>
+            <p class="highlight"><em>"A Perceptron is an algorithm for supervised learning of binary classifiers. This algorithm enables neurons to learn and processes elements in the training set one at a time."</em></p>
+            <figure>
+                <img src="./perceptron.png" alt="Perceptron Model Diagram" loading="lazy">
+                <figcaption>Basic structure of a Perceptron</figcaption>
+            </figure>
+        </section>
+
+        <section id="basic-components">
+            <h2>Basic Components of Perceptron</h2>
+            <ol>
+                <li>
+                    <h3>Input Values</h3>
+                    <p>A perceptron receives one or more input values, which can represent features or attributes of the input data. Each input is typically represented as a real number.</p>
+                </li>
+                <li>
+                    <h3>Weights</h3>
+                    <p>Each input value is associated with a weight. The weights determine the significance or importance of the respective input in influencing the perceptron's output. The weights can be positive or negative real numbers.</p>
+                </li>
+                <li>
+                    <h3>Weighted Sum</h3>
+                    <p>The perceptron computes the weighted sum of the input values by multiplying each input value by its corresponding weight and summing them up. This calculation represents the linear combination of inputs and weights.</p>
+                </li>
+                <li>
+                    <h3>Activation Function</h3>
+                    <p>The weighted sum is then passed through an activation function, which introduces non-linearity into the perceptron's output. The activation function determines whether the perceptron should activate (fire) or remain inactive (not fire) based on the input it receives.</p>
+                </li>
+                <li>
+                    <h3>Threshold/Bias</h3>
+                    <p>In addition to the weighted sum, a perceptron may incorporate a bias term or threshold. The bias acts as an offset that helps control the decision boundary of the perceptron. It can be thought of as the level of activation required for the perceptron to fire.</p>
+                </li>
+                <li>
+                    <h3>Output</h3>
+                    <p>The output is the result of applying the activation function to the weighted sum (plus bias, if present). It typically represents the classification decision or prediction made by the perceptron, such as assigning an input to a particular class or generating a binary output.</p>
+                </li>
+            </ol>
+            <p>During the training process, the weights and bias of the perceptron are adjusted iteratively based on the training data and a learning algorithm. The goal is to find the optimal values for the weights and bias that allow the perceptron to accurately classify the training examples or minimize the error between predicted and desired outputs.</p>
+            <p>By combining multiple perceptrons or using more complex architectures like multi-layer perceptrons (MLPs), it becomes possible to solve more complex problems that require non-linear decision boundaries.</p>
+        </section>
+
+        <section id="types-of-perceptron">
+            <h2>Types of Perceptron Models</h2>
+            <ol>
+                <li>
+                    <h3>Single-Layer Perceptron</h3>
+                    <p>The single-layer perceptron is the basic and most fundamental form of the perceptron model. It consists of a single layer of perceptrons (neurons) that directly connect the inputs to the outputs. It is suitable for linearly separable binary classification problems.</p>
+                </li>
+                <li>
+                    <h3>Multi-Layer Perceptron (MLP)</h3>
+                    <p>The multi-layer perceptron is an extension of the single-layer perceptron that introduces one or more hidden layers between the input and output layers. Each hidden layer contains multiple neurons, and the neurons are densely connected between consecutive layers. The MLP can handle non-linearly separable problems and is capable of learning complex mappings.</p>
+                </li>
+                <li>
+                    <h3>Feedforward Neural Network</h3>
+                    <p>A feedforward neural network is another term used to refer to multi-layer perceptrons (MLPs). It signifies the flow of information in one direction, from the input layer through the hidden layers to the output layer, without loops or feedback connections.</p>
+                </li>
+                <li>
+                    <h3>Radial Basis Function Network (RBFN)</h3>
+                    <p>RBFN is a type of perceptron model that uses radial basis functions as activation functions in the hidden layer(s). The RBFN computes the weighted sum of the distances between the input and a set of learned prototype vectors (centers) and applies a radial basis function to determine the hidden layer activations.</p>
+                </li>
+                <li>
+                    <h3>Probabilistic Neural Network (PNN)</h3>
+                    <p>PNN is a perceptron model that incorporates probability theory into its architecture. It uses a non-linear activation function called the Gaussian kernel to calculate the probability of an input belonging to a specific class. PNN is often used for classification tasks and can handle both binary and multi-class problems.</p>
+                </li>
+                <li>
+                    <h3>Self-Organizing Maps (SOM)</h3>
+                    <p>SOM, also known as Kohonen networks, is a type of unsupervised learning model based on the perceptron architecture. SOM is used for clustering and visualization purposes. It organizes input data into a low-dimensional grid of neurons, where each neuron represents a cluster prototype.</p>
+                </li>
+                <li>
+                    <h3>Adaptive Resonance Theory (ART)</h3>
+                    <p>ART is a family of neural network models that use the perceptron architecture to implement self-organizing and adaptive learning. ART networks are capable of learning and recognizing patterns in a stable and adaptive manner.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="perceptron-learning-rule">
+            <h2>Perceptron Learning Rule</h2>
+            <p>The perceptron learning rule, also known as the <strong>delta rule</strong>, is an iterative algorithm used to train a single-layer perceptron for binary classification tasks. It adjusts the weights of the perceptron based on the errors between the predicted outputs and the desired outputs.</p>
+            <figure>
+                <img src="./perceptronRevision.png" alt="Perceptron Learning Rule Diagram" loading="lazy">
+                <figcaption>Perceptron Learning Process</figcaption>
+            </figure>
+            
+            <h3>Following are the rules in basic flow:</h3>
+            <ol>
+                <li>
+                    <p>Initialize the weights of the perceptron to small random values or zeros.</p>
+                </li>
+                <li>
+                    <p>For each training example (input instance) in the training dataset, perform the following steps:</p>
+                    <ol type="a">
+                        <li>
+                            <p>Calculate the weighted sum of the inputs by multiplying each input value by its corresponding weight and summing them up:</p>
+                            <pre><code>weighted_sum = weight1 * input1 + weight2 * input2 + ... + weightN * inputN</code></pre>
+                        </li>
+                        <li>
+                            <p>Apply the activation function to the weighted sum to obtain the predicted output:</p>
+                            <pre><code>predicted_output = activation_function(weighted_sum)</code></pre>
+                        </li>
+                        <li>
+                            <p>Compute the error by subtracting the predicted output from the desired output:</p>
+                            <pre><code>error = desired_output - predicted_output</code></pre>
+                        </li>
+                        <li>
+                            <p>Update the weights using the perceptron learning rule:</p>
+                            <pre><code>weight_new = weight_old + learning_rate * error * input</code></pre>
+                            <p>The learning rate is a hyperparameter that controls the magnitude of weight updates. It determines the step size during the learning process. The weight update is performed for each weight, where the weight is updated by adding the learning rate multiplied by the error and the corresponding input value.</p>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <p>Repeat Step 2 for all training examples in the dataset.</p>
+                </li>
+                <li>
+                    <p>Iterate over the entire dataset multiple times (epochs) or until a stopping criterion is met, such as reaching a maximum number of iterations or achieving a desired level of accuracy.</p>
+                </li>
+            </ol>
+            <p>This adjusts the weights of the perceptron in a direction that minimizes the error between the predicted outputs and the desired outputs. It aims to find the optimal weights that allow the perceptron to correctly classify the training examples.</p>
+            <p>It's important to note that the rule works effectively for linearly separable datasets, but it may not converge or produce accurate results for datasets that are not linearly separable. For non-linearly separable datasets, more complex models like multi-layer perceptrons (MLPs) or other advanced algorithms are typically used.</p>
+        </section>
+
+        <footer class="article-footer">
+            <hr>
+            <p><strong>This is Part A of the Perceptron Introduction. In Part B we would be covering the Perceptron Function, Perceptron with Logic Gates & Introduction to Activation Functions.</strong></p>
+        </footer>
+    </article>
+</body>
+</html>
+
