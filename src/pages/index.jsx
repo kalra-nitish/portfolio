@@ -5,6 +5,31 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { Layout } from '@/components/Layout'
 import { AnimatedAvatar } from '@/components/AnimatedAvatar'
+import { MorphingText } from "@/components/ui/morphing-text"
+import { ClientOnly } from '@/components/ClientOnly'
+import { Highlighter } from "@/components/ui/highlighter"
+import { RetroGrid } from "@/components/ui/retro-grid"
+import { Button } from "@/components/ui/button"
+import { CoolMode } from "@/components/ui/cool-mode"
+
+export function HighlighterDemo() {
+  return (
+    <div className="text-center">
+      <p className="leading-relaxed">
+        The{" "}
+        <Highlighter action="underline" color="#FF9800">
+          Magic UI Highlighter
+        </Highlighter>{" "}
+        makes important{" "}
+        <Highlighter action="highlight" color="#87CEFA">
+          text stand out
+        </Highlighter>{" "}
+        effortlessly.
+      </p>
+    </div>
+  )
+}
+
 import {
   GitHubIcon,
   InstagramIcon,
@@ -41,7 +66,7 @@ function DiagonalPattern() {
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#diagonal)"/>
-      </svg>
+    </svg>
     </div>
   )
 }
@@ -67,7 +92,7 @@ export default function Home() {
       </Head>
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] pt-32">
+      <section className="relative min-h-[100vh] pt-32">
         <Container>
           <DiagonalPattern />
           
@@ -76,11 +101,20 @@ export default function Home() {
             <div className="flex flex-col justify-center">
               <h1 className="font-serif text-6xl font-bold leading-tight text-robb-navy sm:text-7xl lg:text-8xl">
                 Hi, my <span className="inline-block">name is <strong className="text-robb-navy">Nitish</strong><span className="text-robb-cyan">.</span></span>
-              </h1>
+          </h1>
               
-              <p className="mt-8 text-xl leading-relaxed text-robb-navyDark sm:text-2xl">
-                I'm a <strong className="font-semibold text-robb-navy">frontend architect</strong> from New Delhi, India.
-              </p>
+              <div className="mt-8 text-xl leading-relaxed text-robb-navyDark sm:text-2xl flex flex-wrap items-baseline gap-x-2">
+                <span>I'm a <strong className="font-semibold text-robb-navy">frontend </strong></span>
+                <ClientOnly fallback={<strong className="font-semibold text-robb-navy">developer</strong>}>
+                  <span className="inline-block relative font-semibold text-robb-navy" style={{ width: '140px', height: '1.65rem', fontWeight: '600' }}>
+                    <MorphingText 
+                      className="font-semibold text-robb-navy !text-xl sm:!text-2xl !inline-block !h-full !w-full !max-w-none !mx-0 !text-left [filter:url(#threshold)_blur(0.3px)] !font-weight-800" 
+                      texts={["developer", "architect", "engineer", "designer", "leader", "innovator"]} 
+                    />
+                  </span>
+                </ClientOnly>
+                <span>from New Delhi, India.</span>
+              </div>
             </div>
 
             {/* Right Column - Animated Illustrated Avatar */}
@@ -98,8 +132,8 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="bg-white py-32">
-        <Container>
+      <section className="relative bg-gradient-to-b from-white to-gray-50 py-32 min-h-[700px] overflow-hidden">
+        <Container className="relative z-10">
           <div className="mx-auto max-w-4xl">
             <h2 className="font-serif text-5xl font-bold leading-tight text-robb-navy sm:text-6xl lg:text-7xl">
               Let's work <strong>together</strong><span className="text-robb-pink">.</span>
@@ -109,25 +143,34 @@ export default function Home() {
             <div className="mt-12 space-y-6 text-xl leading-relaxed text-robb-navyDark/80">
               <p>
                 I'm a <strong className="font-semibold text-robb-navy">frontend architect</strong> from New Delhi, India. 
-                From <strong className="font-semibold text-robb-navy">interaction design</strong> to <strong className="font-semibold text-robb-navy">scalable design systems</strong>, 
+                From <strong className="font-semibold text-robb-navy">interaction design</strong> to  <Highlighter action="highlight" color="#87CEFA">scalable design systems</Highlighter>, 
                 single-page apps to something more experimental with <strong className="font-semibold text-robb-navy">AI/ML</strong>. 
               </p>
               <p>
-                I help awesome people to build <strong className="font-semibold text-robb-navy">ambitious yet accessible</strong> web projects — 
+                I help awesome people to build <Highlighter action="underline" color="#FF9800">ambitious yet accessible</Highlighter> web projects — 
                 <strong className="font-semibold text-robb-purple">the wilder, the better</strong>.
               </p>
             </div>
 
-            <Link 
-              href="/work" 
-              className="group mt-12 inline-flex items-center gap-3 text-lg font-medium text-robb-purple hover:text-robb-purpleDark transition"
-            >
-              <span>About my approach</span>
-              <span className="transition-transform group-hover:translate-x-1">→</span>
-              <span className="sr-only">About my approach</span>
-            </Link>
-          </div>
-        </Container>
+            <div className="mt-12 flex justify-center">
+              <CoolMode>
+                <Button asChild variant="default" size="lg" className="bg-black hover:bg-black/60 text-white">
+                  <Link href="/work">
+                    About my Approach →
+                  </Link>
+                </Button>
+              </CoolMode>
+            </div>
+        </div>
+      </Container>
+        
+        <RetroGrid 
+          angle={65}
+          cellSize={100}
+          opacity={1}
+          lightLineColor="#7c3aed"
+          darkLineColor="#67e8f9"
+        />
       </section>
 
       {/* Experience Stats */}
@@ -135,7 +178,7 @@ export default function Home() {
         <Container>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { number: '10+', label: 'Years Experience' },
+              { number: '12+', label: 'Years Experience' },
               { number: '50+', label: 'Projects Delivered' },
               { number: '15+', label: 'Technologies' },
               { number: '3', label: 'Top Companies' },
@@ -187,8 +230,8 @@ export default function Home() {
                 to create intelligent, responsive experiences.
               </p>
             </div>
-          </div>
-        </Container>
+        </div>
+      </Container>
       </section>
     </Layout>
   )

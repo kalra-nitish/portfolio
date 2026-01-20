@@ -296,7 +296,7 @@ export default function Work() {
       {/* CTA */}
       <section className="bg-robb-navy py-24 text-white">
         <Container>
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto max-w-3xl text-center relative">
             <h2 className="font-serif text-4xl font-bold sm:text-5xl">
               Let's work together<span className="text-robb-cyan">.</span>
             </h2>
