@@ -1,3 +1,5 @@
+import { ShimmerButton } from '@/components/ui/shimmer-button'
+
 export function DownloadCV({ variant = 'primary', className = '' }) {
   const handleDownload = () => {
     // Create a link element
@@ -14,13 +16,20 @@ export function DownloadCV({ variant = 'primary', className = '' }) {
 
   if (variant === 'primary') {
     return (
-      <button
+      <ShimmerButton
         onClick={handleDownload}
-        className={`group inline-flex items-center gap-3 rounded-full bg-robb-purple px-8 py-4 text-lg font-medium text-white shadow-lg transition hover:bg-robb-purpleDark hover:shadow-xl ${className}`}
+        className={`shadow-2xl ${className}`}
+        background="linear-gradient(135deg, #7c3aed 0%, #ec4899 50%, #67e8f9 100%)"
+        shimmerColor="#ffffff"
+        shimmerSize="0.1em"
+        shimmerDuration="2s"
+        borderRadius="100px"
       >
-        <span>Download CV</span>
-        <span className="transition-transform group-hover:translate-x-1">→</span>
-      </button>
+        <span className="text-center text-sm leading-none font-semibold tracking-tight whitespace-pre-wrap text-white lg:text-lg flex items-center gap-3">
+          Download CV
+          <span className="transition-transform group-hover:translate-x-1">→</span>
+        </span>
+      </ShimmerButton>
     );
   }
 

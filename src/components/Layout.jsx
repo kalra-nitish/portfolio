@@ -262,7 +262,9 @@ export function Layout({ children, bgColor = 'white', showConnectFooter = true }
                 </a>
               </div>
 
-              <DownloadCV variant="primary" className="mt-12" />
+              <div className="mt-12 flex justify-center">
+                <DownloadCV variant="primary" />
+              </div>
             </div>
           </Container>
         </section>
