@@ -62,7 +62,7 @@ export function Layout({ children, bgColor = 'white', showConnectFooter = true }
             </Link>
             <button
               onClick={() => setIsMenuOpen(true)}
-              className="text-sm font-bold tracking-[0.2em] text-robb-navy hover:text-robb-purple transition cursor-pointer dark:text-white dark:hover:text-robb-cyan"
+              className="text-sm font-bold tracking-[0.2em] text-robb-navy hover:text-robb-purple transition cursor-pointer"
             >
               MENU
             </button>
