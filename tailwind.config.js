@@ -65,6 +65,7 @@ module.exports = {
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
         'grid': 'grid 15s linear infinite',
+        'meteor': 'meteor 5s linear infinite',
       },
       keyframes: {
         gradient: {
@@ -88,6 +89,11 @@ module.exports = {
         grid: {
           '0%': { transform: 'translateY(-50%)' },
           '100%': { transform: 'translateY(0)' },
+        },
+        meteor: {
+          '0%': { transform: 'rotate(var(--angle)) translateX(0)', opacity: '1' },
+          '70%': { opacity: '1' },
+          '100%': { transform: 'rotate(var(--angle)) translateX(-500px)', opacity: '0' },
         }
       },
     },

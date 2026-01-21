@@ -48,12 +48,15 @@
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
   }
+  .theme {
+    --animate-meteor: meteor 5s linear infinite;
+  }
 }
 
 @layer base {
   .theme {
     --animate-grid: grid 15s linear infinite}
-  
+
   @keyframes grid {
     0% {
       transform: translateY(-50%);
@@ -80,6 +83,19 @@
     }
   100% {
     transform: translateY(0);
+    }
+  }
+  @keyframes meteor {
+  0% {
+    transform: rotate(var(--angle)) translateX(0);
+    opacity: 1;
+    }
+  70% {
+    opacity: 1;
+    }
+  100% {
+    transform: rotate(var(--angle)) translateX(-500px);
+    opacity: 0;
     }
   }
 }
