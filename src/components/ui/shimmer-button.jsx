@@ -16,24 +16,46 @@ export const ShimmerButton = React.forwardRef((
   ref
 ) => {
   return (
-    <button
-      style={
-        {
-          "--spread": "90deg",
-          "--shimmer-color": shimmerColor,
-          "--radius": borderRadius,
-          "--speed": shimmerDuration,
-          "--cut": shimmerSize,
-          "--bg": background
+    <>
+      <style>{`
+        @keyframes shimmerSlideAnimation {
+          to {
+            transform: translate(calc(100cqw - 100%), 0);
+          }
         }
-      }
-      className={cn(
-        "group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden [border-radius:var(--radius)] border border-white/10 px-6 py-3 whitespace-nowrap text-white [background:var(--bg)]",
-        "transform-gpu transition-transform duration-300 ease-in-out active:translate-y-px",
-        className
-      )}
-      ref={ref}
-      {...props}>
+        @keyframes spinAroundAnimation {
+          0% {
+            transform: translateZ(0) rotate(0);
+          }
+          15%, 35% {
+            transform: translateZ(0) rotate(90deg);
+          }
+          65%, 85% {
+            transform: translateZ(0) rotate(270deg);
+          }
+          100% {
+            transform: translateZ(0) rotate(360deg);
+          }
+        }
+      `}</style>
+      <button
+        style={
+          {
+            "--spread": "90deg",
+            "--shimmer-color": shimmerColor,
+            "--radius": borderRadius,
+            "--speed": shimmerDuration,
+            "--cut": shimmerSize,
+            "--bg": background
+          }
+        }
+        className={cn(
+          "group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden [border-radius:var(--radius)] border border-white/10 px-6 py-3 whitespace-nowrap text-white [background:var(--bg)]",
+          "transform-gpu transition-transform duration-300 ease-in-out active:translate-y-px",
+          className
+        )}
+        ref={ref}
+        {...props}>
       {/* spark container */}
       <div
         className={cn(
@@ -42,10 +64,18 @@ export const ShimmerButton = React.forwardRef((
         )}>
         {/* spark */}
         <div
-          className="animate-shimmer-slide absolute inset-0 [aspect-ratio:1] h-[100cqh] [border-radius:0] [mask:none]">
+          className="absolute inset-0 [aspect-ratio:1] h-[100cqh] [border-radius:0] [mask:none]"
+          style={{
+            animation: `shimmerSlideAnimation var(--speed) ease-in-out infinite alternate`
+          }}
+        >
           {/* spark before */}
           <div
-            className="animate-spin-around absolute -inset-full w-auto [translate:0_0] rotate-0 [background:conic-gradient(from_calc(270deg-(var(--spread)*0.5)),transparent_0,var(--shimmer-color)_var(--spread),transparent_var(--spread))]" />
+            className="absolute -inset-full w-auto [translate:0_0] rotate-0 [background:conic-gradient(from_calc(270deg-(var(--spread)*0.5)),transparent_0,var(--shimmer-color)_var(--spread),transparent_var(--spread))]"
+            style={{
+              animation: `spinAroundAnimation calc(var(--speed) * 2) infinite linear`
+            }}
+          />
         </div>
       </div>
       {children}
@@ -67,6 +97,7 @@ export const ShimmerButton = React.forwardRef((
           "absolute [inset:var(--cut)] -z-20 [border-radius:var(--radius)] [background:var(--bg)]"
         )} />
     </button>
+    </>
   );
 })
 
