@@ -43,15 +43,7 @@ export function Layout({ children, bgColor = 'white', showConnectFooter = true }
 
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: bgColor }}>
-      {/* SCROLL Indicator */}
-      {/* <div className="fixed left-8 top-1/2 z-40 hidden lg:block" style={{ transform: 'translateY(-50%) rotate(-90deg)', transformOrigin: 'center' }}>
-        <div className="flex items-center gap-3">
-          <span className="text-xs font-medium tracking-[0.3em] text-robb-navy/40 dark:text-white/40">
-            SCROLL
-          </span>
-          <div className="h-px w-12 bg-robb-navy/20 dark:bg-white/20"></div>
-        </div>
-      </div> */}
+
 
       {/* Header */}
       <header className="lg:fixed lg:left-0 lg:right-0 lg:top-0 z-50 fixed top-0 left-0 right-0" style={{ backgroundColor: bgColor }}>

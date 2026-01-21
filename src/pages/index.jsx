@@ -106,9 +106,9 @@ export default function Home() {
               <div className="mt-8 text-xl leading-relaxed text-robb-navyDark sm:text-2xl flex flex-wrap items-baseline gap-x-2">
                 <span>I'm a <strong className="font-semibold text-robb-navy">frontend </strong></span>
                 <ClientOnly fallback={<strong className="font-semibold text-robb-navy">developer</strong>}>
-                  <span className="inline-block relative font-semibold text-robb-navy" style={{ width: '140px', height: '1.65rem', fontWeight: '600' }}>
+                  <span className="inline-block relative font-semibold text-robb-navy" style={{ width: '140px', height: '1.55rem', fontWeight: '600' }}>
                     <MorphingText 
-                      className="font-semibold text-robb-navy !text-xl sm:!text-2xl !inline-block !h-full !w-full !max-w-none !mx-0 !text-left [filter:url(#threshold)_blur(0.3px)] !font-weight-800" 
+                      className="font-semibold text-robb-navy !text-xl sm:!text-2xl !inline-block !h-full !w-full !max-w-none !mx-0 !text-left [filter:url(#threshold)_blur(0.3px)] !font-extrabold" 
                       texts={["developer", "architect", "engineer", "designer", "leader", "innovator"]} 
                     />
                   </span>
