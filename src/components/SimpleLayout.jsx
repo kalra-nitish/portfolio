@@ -6,7 +6,7 @@ export function SimpleLayout({ title, intro, children, bgColor = '#f5f0e8' }) {
     <Layout bgColor={bgColor}>
       <Container className="mt-16 sm:mt-32">
         <header className="max-w-8xl">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-robb-navy">
             {title}
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
