@@ -37,7 +37,7 @@ export function RetroGrid({
         }}
       >
         <div
-          className="animate-grid absolute left-0 top-0"
+          className="absolute left-0 top-0"
           style={{
             width: '600vw',
             height: '300vh',
@@ -46,6 +46,7 @@ export function RetroGrid({
             backgroundImage: `linear-gradient(to right, ${lightLineColor} 2px, transparent 0), linear-gradient(to bottom, ${lightLineColor} 2px, transparent 0)`,
             backgroundSize: `${cellSize}px ${cellSize}px`,
             backgroundRepeat: 'repeat',
+            animation: 'grid 15s linear infinite',
           }}
         />
       </div>
